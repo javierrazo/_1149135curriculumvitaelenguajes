@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link  href="../static/Style.css" th:href="@{/Style.css}" rel="stylesheet" >
+    <title>Curriculum Vitae</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#locales").change(function () {
+          var selectedOption = $('#locales').val();
+          if (selectedOption != ''){
+            window.location.replace('recurso?lang=' + selectedOption);
+          }
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <header>
+        <h1 th:text="#{titulo}"></h1>
+        <h1 th:text="${javier.nombre} +' '+ ${javier.apellidoP} +' '+ ${javier.apellidoM}"></h1>
+    </header>
+
+    <section class="Wallpaper">
+    </section>
+
+    <section class="Main">
+
+    
+    <aside class="">
+      <span th:text="#{lang.change}"></span>:
+      <br>
+      <select id="locales">
+        <option value=""></option>
+        <option value="en" th:text="#{lang.eng}"></option>
+        <option value="es" th:text="#{lang.es}"></option>
+      </select>
+
+      <img class="cover" th:src="${javier.dirFoto}" alt="">
+      <p th:text="#{contacto}"> </p>
+      <p th:text="#{correo}+ ': ' + ${javier.correo}"> </p>
+      <p th:text="#{telefono}+ ': ' +${javier.telefono}"> </p>
+      <p th:text="#{facebook}+ ': ' +${javier.facebook}"> </p>
+
+    </aside>
+
+    <section class="Content">
+      <article class="">
+        <b><h1 th:text="#{grado}"> </h1></b>
+        <hr>
+        <p th:text="${javier.introduccion}">
+        </p>
+      </article>
+
+
+      <article>
+        <h1 th:text="#{experiencia}"> </h1>
+        <ul th:each="exp : ${javier.experiencia}">
+          <li th:text="${exp}" ></li></ul>
+        </ul>
+      </article>
+
+      <article>
+        <h1 th:text="#{formacion}">> </h1>
+        <ul th:each="for : ${javier.formacion}">
+          <li th:text="${for}" ></li>
+        </ul>
+      </article>
+
+      <article>
+        <h1 th:text="#{idiomas}">> </h1>
+        <ul th:each="idio : ${javier.idiomas}">
+          <li th:text="${idio}" ></li>
+        </ul>
+      </article>
+
+
+
+    </section>
+  </section>
+
+    <footer>
+      <br>Javier Razo
+      <br>javier.razo@uabc.edu.mx
+    </footer>
+
+  </body>
+</html>

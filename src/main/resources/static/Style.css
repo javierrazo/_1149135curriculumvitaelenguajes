@@ -1,0 +1,102 @@
+body{
+  background-color: #c9dee0;
+  margin: 0%;
+  padding: 0%;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+  background-color: #222222;
+  height: auto;
+  margin: 0%;
+  margin-top: -1.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+article{
+  background-color: rgba(18, 22, 22, 0.863);
+  color: ghostwhite;
+  padding: 2%;
+  padding-top: 0%;
+  margin-top: -1%
+}
+
+
+section.Wallpaper{
+  background-size: cover;
+  display: block;
+  margin-top: -40%;
+  text-align: center;
+  height: 800px;
+}
+
+section.Main{
+  margin-top: -16%;
+}
+
+section.Content{
+  margin-top: 0%;
+  margin-right: 2%;
+  margin-left: 21%;
+
+}
+
+aside{
+  display: block;
+  padding: 1%;
+  margin-top: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
+  float: left;
+  width: 16%;
+  color: ghostwhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(65, 191, 204);
+}
+
+footer{
+  margin-top: 3%;
+  background-color: #222222;
+  text-align: center;
+  color: #EEEEEE;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+img.cover{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%;
+  height: auto;
+
+}
+
+
+header h1{
+  font-size: 50px;
+  color: #EEEEEE;
+  text-align: center;
+}
+
+article h1{
+  font-size: 40px;
+}
+
+article p{
+  font-size: 20px;
+}
+
+li{
+  font-size: 20px;
+
+}
+
+
+
+
+
